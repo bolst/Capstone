@@ -30,3 +30,34 @@ In this project, you can build your own C++ application or extend this Snake gam
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## General Description
+
+This game was modified off of the base snake game provided by Udacity. The changes made were an added highscore feature, and a difficulty option for the user to choose. The user is prompted once the program begins to play, exit, or view the highscore. If play is selected, the user will use their keyboard to navigate the 'snake' towards the 'food' and pick up points every time the snake meets the food. The snake dies once it hits its body, as every time it eats it grows by one unit. The highest score recorded is saved in a file that can be viewed before/after every game by selecting the appropriate option. 
+
+## Structure
+
+* Controller: 
+  * Purpose is to allow users to use their keyboard to move the snake.
+* Highscore: 
+  * Allows the highest score recorded to be saved.
+* Game: 
+  * Stores the state of the game in a constant loop so that it is constantly updated.
+* GMenu: 
+  * Handles input from user.
+* Player: 
+  * Used for storing information about the score.
+* Render: 
+  * Used for putting the visuals onto the screen.
+* Snake: 
+  * Used for keeping track of data of the snake (location, speed, etc)
+
+## Rubric Points Addressed
+
+* Compiling and Testing: 
+  * Code executes with no errors.
+* Loops, Functinos, I/O: 
+  * Functions were created in `highscore.cpp` and `highscore.h` that were executed in `main.cpp`, as well as functions in `game.cpp` involving getting the difficulty for the game. The project also reads data from `highscore.txt` that keeps the highscore at its proper score. The project also asks for user input in `main.cpp` on lines 16, and line 32 with the `game.GetDifficulty()` function. Loops are also used when reading data from `highscore.txt`.
+* Object Oriented Programming: 
+  * This program uses object oriented programming spefically when using `Snake::SetDiff()` from `snake.cpp`. It updates the reference file with data inputted from the user so that the snake behaves differently based on the difficulty selected. It accesses appropriate specificers for class members so that the behaviours described above may come into effect.
+* Memory Management:
+  * 
