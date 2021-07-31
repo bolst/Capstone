@@ -60,4 +60,4 @@ This game was modified off of the base snake game provided by Udacity. The chang
 * Object Oriented Programming: 
   * This program uses object oriented programming spefically when using `Snake::SetDiff()` from `snake.cpp`. It updates the reference file with data inputted from the user so that the snake behaves differently based on the difficulty selected. It accesses appropriate specificers for class members so that the behaviours described above may come into effect.
 * Memory Management:
-  * 
+  * On line 28 in `snake.cpp` reference is used on `Speed` variable to update
